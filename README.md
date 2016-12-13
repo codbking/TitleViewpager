@@ -9,7 +9,7 @@
  **实现**
 
  ***xml***
-<pre>
+
          <com.codbking.titleviewpager.view.TitleViewPager
              android:id="@+id/pager"
              android:layout_width="match_parent"
@@ -20,11 +20,11 @@
              app:tvp_indicatorHeight="2dp"
              app:tvp_titleWidth="100dp"
              />
-</pre>
+
 
  ***java***
 
-<pre>
+
                 mPager.put("aa",MyFragment.newInstance("aa"));
                 mPager.put("aaaaa",MyFragment.newInstance("aaaaa"));
                 mPager.put("aaaaaaaaaaa",MyFragment.newInstance("aaaaaaaaaaa"));
@@ -33,5 +33,5 @@
                 mPager.put("aaaaaaaaaaaaaaaaaaaaaaaa",MyFragment.newInstance("aaaaaaaaaaaaaaaaaaaaaaaa"));
                 mPager.put("aaaaaaaaaaaaaaaaaaaaaaaaaaaa",MyFragment.newInstance("aaaaaaaaaaaaaaaaaaaaaaaaaaaa"));
                 mPager.load();
-</pre>
+
 
