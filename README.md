@@ -4,7 +4,7 @@
 
 **效果**
 
-![WRAPPER模式](my1.gif)
+![WRAPPER模式](my.gif)
 
 **模式**
 
