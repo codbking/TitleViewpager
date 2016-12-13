@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.codbking.titleviewpager.MainActivity"
+    >
+
+    <com.codbking.titleviewpager.view.TitleViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:tvp_pager_type="WRAPPER"
+        app:tvp_indicatorColor="@color/main_color"
+        app:tvp_indicatorHeight="2dp"
+        app:tvp_titleWidth="100dp"
+        />
+
+</LinearLayout>
