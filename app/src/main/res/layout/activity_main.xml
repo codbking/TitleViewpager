@@ -10,7 +10,7 @@
     tools:context="com.codbking.titleviewpager.MainActivity"
     >
 
-    <com.codbking.titleviewpager.view.TitleViewPager
+    <com.codbking.library.view.TitleViewPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="0dp"

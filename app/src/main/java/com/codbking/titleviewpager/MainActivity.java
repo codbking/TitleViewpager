@@ -3,10 +3,13 @@ package com.codbking.titleviewpager;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.codbking.titleviewpager.view.TitleViewPager;
+
+import com.codbking.library.view.TitleViewPager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
