@@ -15,6 +15,22 @@
 
  **实现**
 
+ 1. Add it in your root build.gradle at the end of repositories:
+
+    	allprojects {
+    		repositories {
+    			...
+    			maven { url 'https://jitpack.io' }
+    		}
+    	}
+
+ 2. Add the dependency:
+
+        dependencies {
+       	        compile 'com.github.codbking:TitleViewpager:v1.0.1'
+       	}
+
+
  ***xml***
 
          <com.codbking.titleviewpager.view.TitleViewPager
