@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 
 import com.codbking.library.R;
@@ -54,6 +55,7 @@ public class TitleViewPager extends FrameLayout implements ViewPager.OnPageChang
     private int indicatorColor=-1;
     private int indicatorHeight;
     private int titleWidth = -1;
+    private int titleColor=-1;
 
     private List<TitlePageBar> mTitleBars = new ArrayList<>();
 
@@ -64,10 +66,12 @@ public class TitleViewPager extends FrameLayout implements ViewPager.OnPageChang
                 attrs, R.styleable.TitleViewPager);
 
         indicatorColor = a.getColor(R.styleable.TitleViewPager_tvp_indicatorColor, -1);
+        titleColor = a.getColor(R.styleable.TitleViewPager_tvp_titleColor, -1);
         indicatorHeight = (int) a.getDimension(R.styleable.TitleViewPager_tvp_indicatorHeight, Utils.px(2));
         mType = Type.getType(a.getInt(R.styleable.TitleViewPager_tvp_pager_type, 0));
         titleWidth = a.getDimensionPixelOffset(R.styleable.TitleViewPager_tvp_titleWidth, -1);
         a.recycle();
+
         initLayout();
     }
 
@@ -151,7 +155,10 @@ public class TitleViewPager extends FrameLayout implements ViewPager.OnPageChang
 
         for (int i = 0; i < mTitelPageAdapter.getCount(); i++) {
 
-            View view = mTitelPageAdapter.getTitleView(mTitles, i);
+            TextView view = (TextView) mTitelPageAdapter.getTitleView(mTitles, i);
+            if(titleColor!=-1){
+                view.setTextColor(titleColor);
+            }
             mTitles.addView(view, getTitleLayoutParams((LinearLayout.LayoutParams) view.getLayoutParams()));
             view.setTag(i);
 

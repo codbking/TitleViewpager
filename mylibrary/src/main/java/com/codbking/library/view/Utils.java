@@ -11,11 +11,8 @@ import android.content.res.Resources;
 
  class Utils {
 
-    public static ColorStateList createColorStateList(Context context, int nColorRes, int pColorRes) {
-        int pressed = context.getResources().getColor(pColorRes);
-        int normal = context.getResources().getColor(nColorRes);
-
-        int[] colors = new int[]{pressed, pressed, normal};
+    public static ColorStateList createColorStateList(int nColor, int pColor) {
+        int[] colors = new int[]{pColor, pColor, nColor};
         int[][] states = new int[3][];
         states[0] = new int[]{android.R.attr.state_pressed};
         states[1] = new int[]{android.R.attr.state_selected};

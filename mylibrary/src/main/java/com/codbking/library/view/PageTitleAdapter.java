@@ -1,6 +1,7 @@
 package com.codbking.library.view;
 
 import android.content.res.ColorStateList;
+import android.content.res.TypedArray;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -40,8 +41,15 @@ class PageTitleAdapter extends FragmentPagerAdapter {
             textView.setPadding(Utils.px(10),0,Utils.px(5),0);
             textView.setSingleLine();
 
-            ColorStateList colorStateList = Utils.createColorStateList(parent.getContext(), R.color.text_body,
-                  R.color.main_color);
+
+            TypedArray array =parent.getContext().getTheme().obtainStyledAttributes(new int[] {
+                    com.codbking.library.R.attr.tvp_pager_main_color,
+            });
+
+           int pColor=array.getColor(0, Utils.getColor(parent.getContext(),R.color.main_color));
+           int nColor=Utils.getColor(parent.getContext(),R.color.text_body);
+
+            ColorStateList colorStateList = Utils.createColorStateList(nColor,pColor);
 
             textView.setTextColor(colorStateList);
             textView.setText(getPageTitle(postion));

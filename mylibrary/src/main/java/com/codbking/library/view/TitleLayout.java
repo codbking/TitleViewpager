@@ -1,6 +1,7 @@
 package com.codbking.library.view;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -16,7 +17,7 @@ import com.codbking.library.R;
  * Created by codbking on 2016/12/13.
  */
 
-public class TitleLayout extends LinearLayout implements ViewPager.OnPageChangeListener {
+class TitleLayout extends LinearLayout implements ViewPager.OnPageChangeListener {
 
     public TitleLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -46,7 +47,10 @@ public class TitleLayout extends LinearLayout implements ViewPager.OnPageChangeL
 
         mPaint = new Paint();
         if(indicatorColor==-1){
-            mPaint.setColor(getContext().getResources().getColor(R.color.main_color));
+            TypedArray arr=getContext().getTheme().obtainStyledAttributes(new int[]{
+               R.attr.tvp_pager_main_color
+            });
+            mPaint.setColor(arr.getColor(0,Utils.getColor(getContext(),R.color.main_color)));
         }else{
             mPaint.setColor(indicatorColor);
         }

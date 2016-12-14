@@ -16,7 +16,6 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         app:tvp_pager_type="WRAPPER"
-        app:tvp_indicatorColor="@color/main_color"
         app:tvp_indicatorHeight="2dp"
         app:tvp_titleWidth="100dp"
         />

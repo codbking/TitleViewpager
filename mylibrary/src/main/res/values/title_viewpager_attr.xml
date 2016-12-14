@@ -4,6 +4,9 @@
     <attr name="tvp_titleWidth" format="dimension|reference"/>
     <attr name="tvp_indicatorColor" format="color|reference"/>
     <attr name="tvp_indicatorHeight" format="dimension|reference"/>
+    <attr name="tvp_titleColor" format="color|reference"/>
+    <attr name="tvp_pager_main_color" format="color|reference"/>
+
     <attr name="tvp_pager_type" format="enum">
         <enum name="FIT" value="0"/>
         <enum name="FIX" value="1"/>
@@ -13,6 +16,8 @@
     <declare-styleable name="TitleViewPager">
         //指示器颜色
         <attr name="tvp_indicatorColor"/>
+        //指示器颜色
+        <attr name="tvp_titleColor"/>
         //指示器高度
         <attr name="tvp_indicatorHeight"/>
         //设置固定title宽度，type为fix时有用
@@ -20,6 +25,5 @@
         //title显示的类型
         <attr name="tvp_pager_type"/>
     </declare-styleable>
-
 
 </resources>
